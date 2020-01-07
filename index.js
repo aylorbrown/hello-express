@@ -23,7 +23,21 @@ app.get('/albums', (req, res) => {
 // register route handler 
 // :albumID is a *placeholder
 app.get('/albums/:albumID', (req, res) => {
-    res.send(`You want a single album`);
+    // express put your 
+    res.send(`You want: ${req.params.albumID}`);
+});
+
+// /albums/42/songs
+app.get('/albums/:albumID/songs', (req, res) => {
+    // send back "the songs for album 42"
+    res.send(`The songs from ${req.params.albumID}`);
+});
+
+
+// /albums/42/songs/3
+app.get('/albums/:albumID/songs/:songID', (req, res) => {
+    // send back "song 3 on album 42 "
+    res.send(`Song ${req.params.songID} on album ${req.params.albumID} `)
 });
 
 // add a catch-all
