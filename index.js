@@ -35,12 +35,20 @@ app.get('/albums/:albumID/songs', (req, res) => {
 
 
 // /albums/42/songs/3
-app.get('/albums/:albumID/songs/:songID', (req, res) => {
+app.get('/albums/:albumID/songs/:songID(\\d+)', (req, res) => {
     // send back "song 3 on album 42 "
     res.send(`Song ${req.params.songID} on album ${req.params.albumID} `)
 });
 
 // add a catch-all
+// - order matters, if this route handler is run by express, 
+// that means nothing above matched, goes at end of file 
+// - '*' will match anything
+// - res had methods.....
+app.get('*') , (req, res) => {
+    console.log(`Redirecting, because no page here!`)
+    res.redirect('/');
+}
 
 
 
