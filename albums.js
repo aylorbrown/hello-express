@@ -1,0 +1,1 @@
+const albumsData = require('albumsData.json');
