@@ -9,11 +9,25 @@ const app = express();
 // call createServer 
 const server = http.createServer(app);
 
-//homepage?
+//homepage
 app.get('/', (req, res) => {
     console.log(`Got a request!`);
     res.send(`Hello Express!`);
 });
+
+app.get('/albums', (req, res) => {
+    console.log(`Got a request!`);
+    res.send(`A List of Albums!!`);
+});
+
+// register route handler 
+// :albumID is a *placeholder
+app.get('/albums/:albumID', (req, res) => {
+    res.send(`You want a single album`);
+});
+
+// add a catch-all
+
 
 
 
