@@ -1,10 +1,9 @@
 {
   "name": "hello-express",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon index.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,5 +14,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aylorbrown/hello-express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aylorbrown/hello-express/issues"
+  },
+  "homepage": "https://github.com/aylorbrown/hello-express#readme",
+  "description": ""
 }
